@@ -20,7 +20,8 @@ alt="PHP Object Oriented Programming (OOP) For Beginners Lesson 1 " width="240" 
 <img src="http://img.youtube.com/vi/wwmmNpNuLSs/0.jpg" style="margin:10px" alt="PHP Beginners Course Strings Tutorial" width="240" height="180" border="10" /></a>
 <a href="https://youtu.be/nFU0Xtde_e0?list=PLZdsdjcJ44WVA2L_dsTa7bijhH3XLZnzW" target="_blank">
 <img src="http://img.youtube.com/vi/nFU0Xtde_e0/0.jpg" style="margin:10px" alt="PHP Array Basics Tutorials" width="240" height="180" border="10" /></a>
-
+<a href="https://www.youtube.com/watch?v=lEIQTVPEwuE&list=PLZdsdjcJ44WUU6i2s73XMK1ZSD9uTPL-z" target="_blank">
+<img src="http://img.youtube.com/vi/c0_iimmevqU/0.jpg" style="margin:10px" alt="PHP Command Line Tutorials" width="240" height="180" border="10" /></a>
 
 ### Docker Tutorials:
 
