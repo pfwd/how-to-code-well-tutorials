@@ -6,14 +6,16 @@ I am in the process of back filling the tutorials so you will have to bare with 
 
  
 ### HTML Tutorials:
-[HTML Tutorial Files]('https://github.com/pfwd/how-to-code-well-tutorials/tree/master/tutorials/html')
+[HTML Tutorial Files]('tutorials/html/README.md')
+
 <a href="https://youtu.be/nq64DmdDrRQ?list=PLZdsdjcJ44WUHbBSqOMFx1PP-Sf4wHFly" target="_blank"><img src="http://img.youtube.com/vi/nq64DmdDrRQ/0.jpg" 
 alt="HTML for beginners" width="240" style="margin:10px" height="180" border="10" /></a>
 <a href="https://www.youtube.com/playlist?list=PLZdsdjcJ44WUmamJbyAYJ9SGkTffxtiRG" target="_blank">
 <img src="http://img.youtube.com/vi/bFJ5yr5ap14/0.jpg" style="margin:10px" alt="HTML 5 forms beginners tutorial" width="240" height="180" border="10" /></a>
 
 ### PHP Tutorials:
-[PHP Tutorial Files]('https://github.com/pfwd/how-to-code-well-tutorials/tree/master/tutorials/php')
+[PHP Tutorial Files]('tutorials/php/README.md')
+
 <a href="https://youtu.be/QgIQfWGMLu4?list=PLZdsdjcJ44WXC5m_8HMcoZft2hmytd4lD" target="_blank"><img src="http://img.youtube.com/vi/QgIQfWGMLu4/0.jpg" 
 alt="PHP Object Oriented Programming (OOP) For Beginners Lesson 1 " width="240" style="margin:10px" height="180" border="10" /></a>
 <a href="https://youtu.be/wwmmNpNuLSs?list=PLZdsdjcJ44WU6oEDZje8htDMG2qBKSSvu" target="_blank">
