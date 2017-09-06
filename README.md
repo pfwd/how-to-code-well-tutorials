@@ -5,7 +5,7 @@ Welcome to the How To Code Well tutorial GitHub repository
 I am in the process of back filling the tutorials so you will have to bare with me.
 
  
-### HTML Tutorials:
+### [HTML Tutorials:]('https://github.com/pfwd/how-to-code-well-tutorials/tree/master/tutorials/html')
 
 <a href="https://youtu.be/nq64DmdDrRQ?list=PLZdsdjcJ44WUHbBSqOMFx1PP-Sf4wHFly" target="_blank"><img src="http://img.youtube.com/vi/nq64DmdDrRQ/0.jpg" 
 alt="HTML for beginners" width="240" style="margin:10px" height="180" border="10" /></a>
