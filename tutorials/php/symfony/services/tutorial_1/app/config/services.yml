@@ -1,0 +1,7 @@
+
+parameters:
+    #parameter_name: value
+
+services:
+  app.checker:
+    class: AppBundle\Helper\Checker
