@@ -14,12 +14,16 @@ class DefaultController extends Controller
     public function indexAction(Request $request)
     {
         $html = '';
-        $arr = ['A','B','A','D'];
-        foreach($arr as $val){
-            $checker = $this->get('app.checker');
-            $html.='DEFAULT: '. json_encode($checker::isValid()). '<br/>';
-            $html.='IS VALID: '. json_encode($checker::isValid($val)). '<br/>';
-        }
+
+        $user = new \stdClass();
+        $user->firstName = 'Peter';
+        $user->lastName = 'Fisher';
+        $user->password = 'abc';
+
+        $userValidation = $this->get('app.validation_user');
+
+        $html.='IS VALID: '. json_encode($userValidation->isValid($user)). '<br/>';
+
 
         return $this->render('default/index.html.twig',[
             'html' => $html
