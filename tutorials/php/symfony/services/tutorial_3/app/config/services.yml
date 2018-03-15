@@ -1,0 +1,16 @@
+
+parameters:
+    #parameter_name: value
+
+services:
+
+  app.validator_user:
+    class: AppBundle\Validation\Validator\UserValidator
+
+  app.validator_admin:
+    class: AppBundle\Validation\Validator\AdminValidator
+
+  app.validation_user:
+    class: AppBundle\Validation\UserValidation
+    arguments:
+      - "@app.validator_user"
