@@ -1,8 +1,9 @@
 <?php
 namespace AppBundle\Validation;
+use AppBundle\Entity\User;
 use AppBundle\Validation\Validator\ValidatorInterface;
 
-class UserValidation implements ValidationInterface
+class UserValidation implements UserValidationInterface, ValidationInterface
 {
     /**
      * @var ValidatorInterface
@@ -14,7 +15,14 @@ class UserValidation implements ValidationInterface
         $this->userValidator = $userValidator;
     }
 
-    public function isValid($user){
+    /**
+     * @return array
+     */
+    public function getErrors(){
+        return $this->userValidator->getErrors();
+    }
+
+    public function isValid(User $user){
         $errors =  $this->userValidator->validate($user);
         return (count($errors) > 0) ? false : true;
     }

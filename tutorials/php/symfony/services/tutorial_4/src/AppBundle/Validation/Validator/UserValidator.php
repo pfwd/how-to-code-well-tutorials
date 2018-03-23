@@ -1,17 +1,24 @@
 <?php
 namespace AppBundle\Validation\Validator;
 
-class UserValidator implements ValidatorInterface
+use AppBundle\Entity\User;
+
+class UserValidator implements UserValidatorInterface, ValidatorInterface
 {
-    public function validate($user){
-        $errors = [];
-        if(empty($user->firstName)){
-            $errors[] = 'Please add a first name';
+    protected $errors = [];
+
+    public function getErrors(){
+        return $this->errors;
+    }
+
+    public function validate(User $user){
+        if(empty($user->getFirstName())){
+            $this->errors[] = 'Please add a first name';
         }
-        if(empty($user->lastName)){
-            $errors[] = 'Please add a last name';
+        if(empty($user->getLastName())){
+            $this->errors[] = 'Please add a last name';
         }
-        return $errors;
+        return $this->errors;
     }
 
 }

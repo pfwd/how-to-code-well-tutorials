@@ -2,6 +2,8 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Product;
+use AppBundle\Entity\User;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -15,15 +17,38 @@ class DefaultController extends Controller
     {
         $html = '';
 
-        $user = new \stdClass();
-        $user->firstName = 'Peter';
-        $user->lastName = 'Fisher';
-        $user->password = 'abc';
+        $user = new User();
+        $user->setFirstName('Peter')
+            ->setLastName('Fisher')
+            ->setPassword('abc')
+        ;
+
+        $product = new Product();
+        $product->setTitle('')
+            ->setDescription('Bar')
+            ->setPrice('1.99')
+            ;
 
         $userValidation = $this->get('app.validation_user');
 
-        $html.='IS VALID: '. json_encode($userValidation->isValid($user)). '<br/>';
+        $isUserValid = $userValidation->isValid($user);
+        $html.='IS USER VALID: '. json_encode($isUserValid). '<br/>';
 
+        if(false === $isUserValid ){
+            foreach($userValidation->getErrors() as $error){
+                $html.= $error. '<br/>';
+            }
+        }
+
+        $productValidation = $this->get('app.validation_product');
+        $isProductValid = $productValidation->isValid($product);
+        $html.='IS PRODUCT VALID: '. json_encode($isProductValid). '<br/>';
+
+        if(false === $isProductValid ){
+            foreach($productValidation->getErrors() as $error){
+                $html.= $error. '<br/>';
+            }
+        }
 
         return $this->render('default/index.html.twig',[
             'html' => $html

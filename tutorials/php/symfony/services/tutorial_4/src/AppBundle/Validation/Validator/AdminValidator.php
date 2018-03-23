@@ -1,17 +1,24 @@
 <?php
 namespace AppBundle\Validation\Validator;
 
+use AppBundle\Entity\User;
+
 class AdminValidator extends UserValidator
 {
-    public function validate($user){
+    public function __construct($minPasswordLength)
+    {
 
-        $errors = parent::validate($user);
+    }
 
-        if(strlen($user->password) < 5){
-            $errors[] = 'Please have a better password';
+    public function validate(User $user){
+
+        parent::validate($user);
+
+        if(strlen($user->getPassword()) < 5){
+            $this->errors[] = 'Please have a better password';
         }
 
-        return $errors;
+        return $this->errors;
     }
 
 }

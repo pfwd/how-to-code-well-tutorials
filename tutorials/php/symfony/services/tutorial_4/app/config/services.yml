@@ -10,7 +10,15 @@ services:
   app.validator_admin:
     class: AppBundle\Validation\Validator\AdminValidator
 
+  app.validator_product:
+    class: AppBundle\Validation\Validator\ProductValidator
+
   app.validation_user:
     class: AppBundle\Validation\UserValidation
     arguments:
       - "@app.validator_user"
+
+  app.validation_product:
+    class: AppBundle\Validation\ProductValidation
+    arguments:
+      - "@app.validator_product"
