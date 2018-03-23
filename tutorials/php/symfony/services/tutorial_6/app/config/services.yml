@@ -1,0 +1,28 @@
+
+parameters:
+    admin.min_password_length: 10
+
+services:
+
+  app.validator_user:
+    class: AppBundle\Validation\Validator\UserValidator
+
+  app.validator_admin:
+    class: AppBundle\Validation\Validator\AdminValidator
+    arguments:
+      - "%admin.min_password_length%"
+    calls:
+      - [setLogger, ["@logger"]]
+
+  app.validator_product:
+    class: AppBundle\Validation\Validator\ProductValidator
+
+  app.validation_user:
+    class: AppBundle\Validation\UserValidation
+    arguments:
+      - "@app.validator_admin"
+
+  app.validation_product:
+    class: AppBundle\Validation\ProductValidation
+    arguments:
+      - "@app.validator_product"

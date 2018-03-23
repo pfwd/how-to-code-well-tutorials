@@ -1,0 +1,33 @@
+
+parameters:
+    admin.min_password_length: 10
+
+services:
+
+  app.validator_user:
+    class: AppBundle\Validation\Validator\UserValidator
+    public: false
+
+  app.validator_admin:
+    class: AppBundle\Validation\Validator\AdminValidator
+    arguments:
+      - "%admin.min_password_length%"
+    calls:
+      - [setLogger, ["@logger"]]
+    deprecated: "%service_id% is deprecated and will be removed in version 1.2 please use app.foobar"
+    public: false
+
+  app.validator_product:
+    class: AppBundle\Validation\Validator\ProductValidator
+    public: false
+
+  app.validation_user:
+    class: AppBundle\Validation\UserValidation
+    arguments:
+      - "@app.validator_admin"
+    public: true
+
+  app.validation_product:
+    class: AppBundle\Validation\ProductValidation
+    arguments:
+      - "@app.validator_product"
